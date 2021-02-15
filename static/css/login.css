@@ -1,0 +1,75 @@
+.container {
+    height: 93vh;
+    width: 100vw;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.box {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.circle1 {
+    position: relative;
+    bottom: 210px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(236, 238, 238);
+    border-radius: 50%;
+}
+
+.circle2 {
+    position: relative;
+    top: 210px;
+    right: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(236, 238, 238);
+    border-radius: 50%;
+}
+
+.log-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.center {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.log-item label {
+    font-size: 20px;
+    /* font-family: arial; */
+}
+
+.log-item input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+.btn {
+    height: 32px;
+    width: 100px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    margin-top: 15px;
+}

@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    /* height: 100vh; */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: cyan;
+    height: 50px;
+}
+
+.nav-item {
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    /* margin-top: 10px; */
+}
+
+.login-btn {
+    float: right!important;
+    right: 1px;
+    /* margin-left: ; */
+}
+
+.nav-items {
+    display: flex;
+    margin: 10px;
+    /* background-color: black; */
+}
+
+nav a {
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:focus {
+    color: red;
+}
+
+
+/* 
+nav a:visited {
+    color: blue;
+} */
