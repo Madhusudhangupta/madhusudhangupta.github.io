@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Core Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhusudhan Gupta – Full-Stack Developer</title>
+  <meta name="description" content="Full-Stack Developer | Clean Code, Modern Web Apps, Scalable Backends">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (deferred) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Madhusudhan Gupta – Portfolio" />
+  <meta property="og:description" content="Full-Stack Developer – Projects & Contact" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Home">MyPortfolio</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="parallax" role="banner">
+    <div class="container header-content">
+      <h1>Hi, I'm Madhusudhan Gupta</h1>
+      <p>Software Engineer</p>
+      <a href="#projects" class="btn btn-scroll" aria-label="View my projects">See My Work</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="fade-in parallax" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading">About Me</h2>
+      <p>I’m a passionate Full-Stack Developer with a knack for creating seamless, user-friendly web applications. With experience in both frontend and backend technologies, I enjoy turning ideas into reality through clean, efficient code and thoughtful design. I thrive on solving problems, learning new technologies, and building projects that make a real impact.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in parallax" aria-labelledby="projects-heading">
+    <div class="container">
+      <h2 id="projects-heading">My Projects</h2>
+
+      <!-- Grid -->
+      <div class="projects-grid" role="list">
+        <article class="project-card" role="listitem">
+          <img src="images/cinegrid.png" alt="CineGrid - Movie Discovery App" loading="lazy" width="400" height="250" />
+          <h3>CineGrid - Movie Discovery App</h3>
+          <p>Vite + Node.js</p>
+          <a href="https://cine-grid-madhusudhangs-projects.vercel.app/" class="btn" target="_blank" rel="noopener">View Live</a>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <img src="images/imdb-clone.png" alt="IMDB Clone - Next.js Movie Platform" loading="lazy" width="400" height="250" />
+          <h3>IMDB Clone</h3>
+          <p>Next.js</p>
+          <a href="https://imdb-clone-nextjs-two.vercel.app/" class="btn" target="_blank" rel="noopener">View Live</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- Contact -->
+<section id="contact" class="fade-in parallax" aria-labelledby="contact-heading">
+  <div class="container">
+    <h2 id="contact-heading">Contact Me</h2>
+    <p>I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out.</p>
+
+    <div class="contact-wrapper">
+      <form id="contactForm" action="https://formspree.io/f/madhusudhang" method="POST" class="contact-form" novalidate>
+        <!-- Name -->
+        <div class="form-group">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" name="_replyto" placeholder="Your Email" required autocomplete="email" />
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info-social">
+        <ul class="social-links" aria-label="Social profiles">
+          <li><a href="https://github.com/Madhusudhangupta" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/in/madhusudhangupta" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="fade-in">
+    <p>Made with <span aria-label="love">❤️</span> by Ev</p>
+  </footer>
+
+  <!-- JavaScript (deferred) -->
+  <!-- If you had filter JS in script.js, you can remove it now -->
+  <script defer src="js/script.js"></script>
+</body>
+</html>
