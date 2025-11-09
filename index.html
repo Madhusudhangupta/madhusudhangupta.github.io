@@ -116,14 +116,15 @@
     </div>
   </section>
 
- <!-- Contact -->
+<!-- Contact -->
 <section id="contact" class="fade-in parallax" aria-labelledby="contact-heading">
   <div class="container">
     <h2 id="contact-heading">Contact Me</h2>
     <p>I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out.</p>
 
     <div class="contact-wrapper">
-      <form id="contactForm" action="https://formspree.io/f/madhusudhang" method="POST" class="contact-form" novalidate>
+      <!-- ==== FORM ==== -->
+      <form id="contactForm" action="https://formspree.io/f/mrbrzyeq" method="POST" class="contact-form" novalidate>
         <!-- Name -->
         <div class="form-group">
           <label class="sr-only" for="name">Name</label>
@@ -141,19 +142,25 @@
         <!-- Message -->
         <div class="form-group">
           <label class="sr-only" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required autocomplete="off"></textarea>
           <span class="error-msg" aria-live="polite"></span>
         </div>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
 
+      <!-- ==== SOCIAL ==== -->
       <div class="contact-info-social">
         <ul class="social-links" aria-label="Social profiles">
-          <li><a href="https://github.com/Madhusudhangupta" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://linkedin.com/in/madhusudhangupta" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Madhusudhangupta" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/in/madhusudhangupta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         </ul>
       </div>
+    </div>
+
+    <!-- ==== SUCCESS OVERLAY ==== -->
+    <div id="form-success" role="alert" aria-live="assertive">
+      <div class="msg">Thank you! Your message has been sent.</div>
     </div>
   </div>
 </section>

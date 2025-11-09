@@ -292,3 +292,50 @@ img[loading="lazy"].loaded{opacity:1}
   background: rgba(255, 255, 255, 0.15) !important;
   color: #fff !important;
 }
+
+/* ---- Success overlay ---- */
+#form-success {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s;
+  z-index: 9999;
+}
+#form-success.show { opacity: 1; visibility: visible; }
+
+#form-success .msg {
+  background:#28a745;
+  color:#fff;
+  padding:1.5rem 2.5rem;
+  border-radius:8px;
+  font-weight:600;
+  box-shadow:0 8px 30px rgba(0,0,0,.3);
+  text-align:center;
+  animation:pop .4s ease-out;
+}
+@keyframes pop{
+  0%{transform:scale(.8);opacity:0}
+  100%{transform:scale(1);opacity:1}
+}
+
+/* ---- Button loading ---- */
+.btn.loading {
+  pointer-events:none;
+  opacity:.7;
+}
+.btn.loading::after{
+  content:"";
+  display:inline-block;
+  width:1em;height:1em;
+  margin-left:.5em;
+  border:2px solid #fff;
+  border-radius:50%;
+  border-top-color:transparent;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
