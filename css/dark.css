@@ -1,0 +1,8 @@
+/* Dark theme */
+body { background: #121212; color: #e0e0e0; }
+#navbar { background: rgba(18,18,18,.9); }
+.btn, .project-card .btn { background: #6a11cb; }
+.project-card { background: rgba(30,30,30,.6); }
+h1, h2, h3 { color: #64b5f6; }
+a { color: #64b5f6; }
+a:hover { color: #bb86fc; }

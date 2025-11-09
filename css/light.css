@@ -1,0 +1,5 @@
+body { background: #f0f3f7; color: #333; }
+#navbar { background: rgba(255,255,255,.9); }
+.btn, .project-card .btn { background: #2575fc; color: #fff; }
+.project-card { background: rgba(255,255,255,.15); }
+h1, h2, h3 { color: #2575fc; }

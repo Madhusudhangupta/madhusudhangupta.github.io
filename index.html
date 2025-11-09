@@ -31,9 +31,32 @@
   <meta property="og:image" content="images/og-image.jpg" />
   <meta property="og:url" content="https://madhusudhangupta.github.io" />
   <meta property="og:type" content="website" />
+
+  <!-- ==== NEW: Theme, PWA, External Libraries ==== -->
+    <link id="theme" rel="stylesheet" href="css/light.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2575fc" />
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+
+    <!-- Visitor Counter -->
+    <div id="visitor-counter" class="visitor-counter">Visitors: <span id="visitors">0</span></div>
+
   <!-- Navigation -->
   <nav id="navbar" aria-label="Main navigation">
     <div class="container nav-container">
@@ -49,7 +72,7 @@
   <!-- Hero -->
   <header id="home" class="parallax" role="banner">
     <div class="container header-content">
-      <h1>Hi, I'm Madhusudhan Gupta</h1>
+      <h1>Hi, I'm <span id="typewriter"></span></h1>
       <p>Software Engineer</p>
       <a href="#projects" class="btn btn-scroll" aria-label="View my projects">See My Work</a>
     </div>
@@ -67,6 +90,11 @@
   <section id="projects" class="fade-in parallax" aria-labelledby="projects-heading">
     <div class="container">
       <h2 id="projects-heading">My Projects</h2>
+      <!-- GitHub Stats -->
+        <div class="github-stats">
+        <img src="https://github-readme-stats.vercel.app/api?username=madhusudhangupta&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" loading="lazy" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=madhusudhangupta&layout=compact&theme=radical&hide_border=true" alt="Top Languages" loading="lazy" />
+        </div>
 
       <!-- Grid -->
       <div class="projects-grid" role="list">

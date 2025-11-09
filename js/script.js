@@ -133,3 +133,73 @@ document.getElementById('contactForm')?.addEventListener('submit', function (e) 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
 });
+
+// Dark Mode
+const themeToggle = document.getElementById('theme-toggle');
+const themeLink = document.getElementById('theme');
+const moonIcon = themeToggle.querySelector('i');
+
+function setTheme(mode) {
+  themeLink.href = `css/${mode}.css`;
+  document.body.setAttribute('data-theme', mode);
+  localStorage.setItem('theme', mode);
+  moonIcon.classList.toggle('fa-sun', mode === 'light');
+  moonIcon.classList.toggle('fa-moon', mode === 'dark');
+}
+
+themeToggle.addEventListener('click', () => {
+  const current = localStorage.getItem('theme') || 'light';
+  setTheme(current === 'light' ? 'dark' : 'light');
+});
+
+// Auto-detect
+if (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  setTheme('dark');
+} else {
+  setTheme(localStorage.getItem('theme') || 'light');
+}
+
+// Visitor Counter
+fetch('https://api.github.com/repos/madhusudhangupta/madhusudhangupta.github.io')
+  .then(r => r.json())
+  .then(data => {
+    const count = data.subscribers_count || data.watchers_count || 0;
+    document.getElementById('visitors').textContent = count || 'Launching Soon';
+  })
+  .catch(() => {
+    document.getElementById('visitors').textContent = 'Live'; // Fallback
+  });
+
+// Particles
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 60 },
+    "color": { "value": "#64b5f6" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.4 },
+    "size": { "value": 3 },
+    "line_linked": { "enable": true, "color": "#64b5f6", "opacity": 0.3 },
+    "move": { "enable": true, "speed": 1.5 }
+  },
+  "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
+});
+
+// Typing Effect
+new Typewriter('#typewriter', {
+  strings: ['Madhusudhan Gupta', 'Full-Stack Developer', 'Problem Solver'],
+  autoStart: true, loop: true, delay: 80
+});
+
+// Progress Bar
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop || document.body.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});

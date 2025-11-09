@@ -223,3 +223,72 @@ footer{
 /* ===================== Image Fade-in ===================== */
 img[loading="lazy"]{opacity:0;transition:opacity .3s}
 img[loading="lazy"].loaded{opacity:1}
+
+
+/* ==== NEW STYLES ==== */
+
+/* Dark Mode Toggle */
+#theme-toggle {
+  position: fixed; top: 20px; right: 20px; z-index: 1001;
+  background: rgba(255,255,255,.2); border: none; border-radius: 50%;
+  width: 48px; height: 48px; font-size: 1.4rem; color: #fff;
+  cursor: pointer; backdrop-filter: blur(10px);
+  transition: all .3s;
+}
+#theme-toggle:hover { transform: scale(1.1); }
+
+/* Progress Bar */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 4px;
+  background: #6a11cb; width: 0; z-index: 1002;
+  transition: width .2s;
+}
+
+/* Custom Cursor */
+.cursor {
+  width: 18px; height: 18px; border: 2px solid #64b5f6;
+  border-radius: 50%; position: fixed; pointer-events: none;
+  transform: translate(-50%, -50%); z-index: 9999;
+  transition: transform .1s, width .3s, height .3s;
+}
+.cursor::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 6px; height: 6px; background: #64b5f6;
+  border-radius: 50%; transform: translate(-50%, -50%);
+}
+
+/* Particles */
+#particles-js {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1; pointer-events: none;
+}
+
+/* Visitor Counter */
+.visitor-counter {
+  position: fixed; bottom: 20px; left: 20px; z-index: 1000;
+  background: rgba(0,0,0,.6); color: #fff; padding: .5rem 1rem;
+  border-radius: 20px; font-size: .9rem; backdrop-filter: blur(8px);
+}
+
+/* GitHub Stats */
+.github-stats {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  margin: 2rem 0;
+}
+.github-stats img {
+  border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+/* Theme Toggle Visibility in Light Mode */
+#theme-toggle {
+  background: rgba(0, 0, 0, 0.12) !important;  /* Dark tint in light mode */
+  color: #222 !important;                    /* Dark icon */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* In dark mode: make it visible with light tint */
+[data-theme="dark"] #theme-toggle,
+#theme-toggle.fa-sun {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+}
